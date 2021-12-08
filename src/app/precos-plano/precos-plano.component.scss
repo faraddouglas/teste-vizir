@@ -1,0 +1,71 @@
+/*PRECO TELZIR*/
+.preco-telzir {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  padding: 10px;
+}
+
+.preco-telzir .pc-content {
+  padding: 20px;
+  width: 250px;
+  height: 470px;
+
+  border-style: solid;
+  border-radius: 8px;
+  border-color: #E5E5E5;
+
+  margin: 0;
+
+  img {
+    width: 80px;
+    height: 68px;
+    margin: 3px;
+  }
+
+  h5{
+    margin: 12px;
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  p{
+    margin: 15px;
+  }
+
+  .beneficios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    color: #666666;
+    font-size: 14px;
+
+    fa-icon{
+      color: lawngreen;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-color: #AB49CE;
+    border-radius: 8px;
+    border-width: 2px;
+    margin: 20px 42px 10px 42px;
+    font-weight: 900;
+
+    width: 120px;
+    height: 40px;
+  }
+}

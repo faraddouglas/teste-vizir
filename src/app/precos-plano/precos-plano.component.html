@@ -1,0 +1,44 @@
+<section class="preco-telzir">
+  <div class="pc-content">
+
+    <img src={{img}} alt="preço 01">
+
+    <h5>
+      {{tipoPlano}}
+    </h5>
+
+    <div *ngIf="valor else personalizado">
+      <h1>
+        {{valor}}/mês
+      </h1>
+    </div>
+    <ng-template #personalizado>
+      <h1>
+        Customize
+      </h1>
+    </ng-template>
+    <p>
+      Para organizar todos os lados da sua vida
+    </p>
+    <p>
+      <strong>Um plano para cada pessoa</strong>
+    </p>
+
+    <div class="beneficios">
+      <fa-icon [icon]="faCheck"></fa-icon>
+      <p>{{vantagem01}}</p>
+    </div>
+
+    <div class="beneficios">
+      <fa-icon [icon]="faCheck"></fa-icon>
+      <p>{{vantagem02}}</p>
+    </div>
+
+    <div class="beneficios">
+      <fa-icon [icon]="faCheck"></fa-icon>
+      <p>{{vantagem03}}</p>
+    </div>
+
+    <a class="btn" href="#">Comprar</a>
+  </div>
+</section>

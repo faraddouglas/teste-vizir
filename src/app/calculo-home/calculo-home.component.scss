@@ -1,0 +1,133 @@
+/*CÁLCULO TELZIR*/
+.calculo-telzir {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 20px 10px 20px 10px;
+  background-color: #FFE8D3;
+
+
+    .cl-content-1{
+      margin: 20px 10px 20px 40px;
+      width: 25%;
+    }
+
+    .cl-content-2{
+      margin: 20px 40px 20px 10px;
+      width: 40%;
+      background-color: #fff;
+
+      border-radius: 8px;
+
+      .lina01{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        p {
+          color: #000000;
+        }
+
+        .coluna-l01 {
+          padding: 5px;
+          width: 33.33%;
+
+          select {
+            border-style: none;
+            color: #A8A8A8;
+            width: 100%;
+            padding: 5px;
+          }
+        }
+
+        .coluna01-l01 {
+          border-style: none solid solid none;
+          border-width: 1px;
+          border-color: #E5E5E5;
+        }
+
+        .coluna02-l01 {
+          border-style: none none solid none;
+          border-width: 1px;
+          border-color: #E5E5E5;
+        }
+
+        .coluna03-l01 {
+          border-style: none none solid solid;
+          border-width: 1px;
+          border-color: #E5E5E5;
+        }
+
+      }
+
+      .linha02{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        p {
+          color: #000000;
+        }
+
+        .coluna-l02 {
+          padding: 5px;
+          width: 100%;
+
+          border-style: none none solid none;
+          border-width: 1px;
+          border-color: #E5E5E5;
+
+          select {
+            border-style: none;
+            color: #A8A8A8;
+            width: 100%;
+            padding: 5px;
+          }
+        }
+      }
+
+      .linha03 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        p {
+          color: #000000;
+        }
+
+        .coluna-l03 {
+          padding: 5px;
+        }
+      }
+    }
+
+    h1 {
+      margin: 10px;
+      font-size: 40px;
+    }
+
+    p {
+      margin: 10px;
+      font-size: 18px;
+      color: #666666;
+    }
+}
+
+@media (max-width: 700px) {
+  .calculo-telzir{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    .cl-content-1{
+      margin: 20px 0px 20px 0px;
+      width: 100%;
+    }
+
+    .cl-content-2{
+      margin: 20px 0px 20px 0px;
+      width: 100%;
+    }
+  }
+}

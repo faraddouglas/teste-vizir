@@ -1,0 +1,90 @@
+/*VANTAGENS TELZIR*/
+.vantagens-telzir-01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+  .vt-content {
+    width: 15%;
+  }
+
+  .vantagens-telzir-esq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 0 0 200px;
+    width: 60%;
+
+    .vt-content {
+      width: 50%;
+
+      h1 {
+        font-size: 40px;
+        font-weight: 500;
+
+        padding: 15px 30px 5px 0;
+      }
+
+      p {
+        color: #666666;
+        padding: 2px 0 15px 0;
+      }
+    }
+
+    .vt-content-3 {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+}
+
+.vantagens-hr {
+  margin-left: 36%;
+  border: 1px solid #D0D0D0;
+}
+
+.vt-content-1{
+
+  h1 {
+    font-size: 40px;
+    padding-top: 15px;
+  }
+}
+
+
+
+@media (max-width: 1000px) {
+  .vantagens-telzir-01 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0px;
+
+    .vt-content{
+      width: 100%;
+    }
+
+    .vantagens-telzir-esq {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      margin: 0px;
+      width: 100%;
+
+      .vt-content{
+        padding: 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  .vantagens-hr {
+    margin-left: 0;
+    border: 1px solid #D0D0D0;
+  }
+}
