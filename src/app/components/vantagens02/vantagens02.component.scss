@@ -2,59 +2,67 @@
 .vantagens-telzir-01 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 
-
-  .vt-content {
-    width: 15%;
-  }
+  margin: 20px 0 20px 0;
 
   .vantagens-telzir-esq {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin: 0 0 0 200px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #D0D0D0;
+
     width: 60%;
 
     .vt-content {
-      width: 50%;
+      padding: 0 0 40px 0;
 
       h1 {
         font-size: 40px;
         font-weight: 500;
-
-        padding: 15px 30px 5px 0;
       }
 
       p {
         color: #666666;
-        padding: 2px 0 15px 0;
+        padding: 10px 0 0 0;
       }
+    }
+
+    .vt-content-2 {
+      width: 40%;
     }
 
     .vt-content-3 {
       display: flex;
       justify-content: center;
+
+      align-items: center;
+
+      width: 60%;
+
+      .icon {
+        padding: 20px;
+        color: #666666;
+
+        p {
+          font-size: 12px;
+        }
+      }
+
+      .price {
+        display: flex;
+        justify-content: end;
+        width: 30%;
+        color: #AB49CE;
+      }
+
     }
 
   }
 }
-
-.vantagens-hr {
-  margin-left: 36%;
-  border: 1px solid #D0D0D0;
-}
-
-.vt-content-1{
-
-  h1 {
-    font-size: 40px;
-    padding-top: 15px;
-  }
-}
-
-
 
 @media (max-width: 1000px) {
   .vantagens-telzir-01 {
@@ -66,6 +74,7 @@
 
     .vt-content{
       width: 100%;
+      padding-left: 0;
     }
 
     .vantagens-telzir-esq {
@@ -79,12 +88,16 @@
       .vt-content{
         padding: 20px;
         width: 100%;
+
+        h1 {
+          padding: 0;
+        }
+      }
+      .vt-content-3 {
+        .price {
+          width: auto;
+        }
       }
     }
-  }
-
-  .vantagens-hr {
-    margin-left: 0;
-    border: 1px solid #D0D0D0;
   }
 }

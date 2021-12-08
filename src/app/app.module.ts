@@ -3,21 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { PrecosPlanoComponent } from './precos-plano/precos-plano.component';
+import { CalculoHomeComponent } from './components/calculo-home/calculo-home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { PrecosPlanoComponent } from './components/precos-plano/precos-plano.component';
+import { Vantagens01Component } from './components/vantagens01/vantagens01.component';
+import { Vantagens02Component } from './components/vantagens02/vantagens02.component';
+import { Vantagens03Component } from './components/vantagens03/vantagens03.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FooterComponent } from './footer/footer.component';
-import { CalculoHomeComponent } from './calculo-home/calculo-home.component';
-import { Vantagens01Component } from './vantagens01/vantagens01.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CalculoHomeComponent,
+    FooterComponent,
     HomeComponent,
     PrecosPlanoComponent,
-    FooterComponent,
-    CalculoHomeComponent,
-    Vantagens01Component
+    Vantagens01Component,
+    Vantagens02Component,
+    Vantagens03Component
   ],
   imports: [
     BrowserModule,

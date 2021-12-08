@@ -1,0 +1,130 @@
+/*VANTAGENS TELZIR*/
+.vantagens-telzir-01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 20px 0 20px 0;
+
+  .vantagens-telzir-esq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 60%;
+
+    .vt-content {
+      padding: 0 0 40px 0;
+
+      h1 {
+        font-size: 40px;
+        font-weight: 500;
+      }
+
+      p {
+        color: #666666;
+        padding: 10px 0 0 0;
+      }
+    }
+
+    .vt-content-2 {
+      width: 40%;
+    }
+
+    .vt-content-3{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+
+      margin: 0 20px 20px 20px;
+      padding: 0;
+      width: 50%;
+      background-color: #fff;
+
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 8px;
+      border-color: #E5E5E5;
+
+
+      table {
+        border-collapse: collapse;
+        height: 100%;
+      }
+
+      table .header {
+        text-align: center;
+        width: 100%;
+
+        font-size: 18px;
+        font-weight: 700;
+
+        color: #AB49CE;
+
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #E5E5E5;
+
+        td {
+          padding: 10px;
+        }
+      }
+
+      table .body {
+        text-align: center;
+        width: 100%;
+
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #E5E5E5;
+
+        td {
+          padding: 10px;
+        }
+      }
+
+      table .body:last-child {
+        border-bottom-style: none;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .vantagens-telzir-01 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0px;
+
+    .vt-content{
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .vantagens-telzir-esq {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      margin: 0px;
+      width: 100%;
+
+      .vt-content{
+        padding: 20px;
+        width: 100%;
+
+        h1 {
+          padding: 0;
+        }
+      }
+
+      .vt-content-3{
+        width: 80%;
+      }
+    }
+  }
+}

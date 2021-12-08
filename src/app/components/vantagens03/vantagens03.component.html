@@ -1,0 +1,29 @@
+<section class="vantagens-telzir-01">
+  <div class="vt-content vt-content-1">
+  </div>
+
+  <section class="vantagens-telzir-esq">
+    <div class="vt-content vt-content-2">
+      <h1>Você paga uma única vez e fala a vontade</h1>
+      <p>
+        Não precisa se preocupar com preço no fim do mês,
+        nossa taxa é fixa.
+      </p>
+    </div>
+
+    <div class="vt-content vt-content-3">
+      <table>
+        <tr class="header">
+          <td>Origem</td>
+          <td>Destino</td>
+          <td>$/min</td>
+        </tr>
+        <tr class="body" *ngFor="let tabelaPreco of tabelaPrecos">
+          <td>{{tabelaPreco.origem}}</td>
+          <td>{{tabelaPreco.destino}}</td>
+          <td>{{tabelaPreco.valMin}}</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</section>

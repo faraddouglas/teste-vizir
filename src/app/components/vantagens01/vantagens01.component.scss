@@ -1,0 +1,99 @@
+/*VANTAGENS TELZIR*/
+.vantagens-telzir-01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 20px 0 20px 0;
+
+    .vt-content {
+      width: 30%;
+      padding-left: 30px;
+    }
+
+
+  .vantagens-telzir-esq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #D0D0D0;
+
+    width: 60%;
+
+    .vt-content {
+      width: 50%;
+      padding: 0 0 40px 0;
+
+      h1 {
+        font-size: 40px;
+        font-weight: 500;
+      }
+
+      p {
+        color: #666666;
+        padding: 10px 0 0 0;
+      }
+    }
+
+    .vt-content-2 {
+      width: 40%;
+    }
+
+    .vt-content-3 {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+}
+
+.vt-content-1{
+
+  h1 {
+    font-size: 40px;
+    padding-top: 15px;
+  }
+}
+
+
+
+@media (max-width: 1000px) {
+  .vantagens-telzir-01 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0px;
+
+    .vt-content{
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .vantagens-telzir-esq {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      margin: 0px;
+      width: 100%;
+
+      .vt-content{
+        padding: 20px;
+        width: 100%;
+
+        h1 {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .vantagens-hr {
+    margin-left: 0;
+    border: 1px solid #D0D0D0;
+  }
+}
