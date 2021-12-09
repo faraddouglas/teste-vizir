@@ -5,6 +5,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  text-align: center;
+
   padding: 20px 10px 20px 10px;
   background-color: #FFE8D3;
 
@@ -91,27 +93,48 @@
       .linha03 {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
         p {
           color: #000000;
         }
+      }
 
-        .coluna-l03 {
-          padding: 5px;
+      .linha04 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin: 30px 0 30px 0;
+
+        .btn {
+          border-style: solid;
+          border-color: #58c272;
+          border-radius: 8px;
+          border-width: 2px;
+          padding: 10px 30px;
+          font-weight: 900;
+          color: #000 !important;
+          background-color: #58c272;
+
+          cursor: pointer;
         }
       }
     }
 
     h1 {
-      margin: 10px;
       font-size: 40px;
     }
+
 
     p {
       margin: 10px;
       font-size: 18px;
       color: #666666;
+
+      strong:last-child {
+        color: #AB49CE;
+      }
     }
 }
 
@@ -129,5 +152,10 @@
       margin: 20px 0px 20px 0px;
       width: 100%;
     }
+
+    .linha04 {
+      padding: 0;
+    }
+
   }
 }

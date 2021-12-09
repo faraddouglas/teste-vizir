@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,8 @@ import { Vantagens01Component } from './components/vantagens01/vantagens01.compo
 import { Vantagens02Component } from './components/vantagens02/vantagens02.component';
 import { Vantagens03Component } from './components/vantagens03/vantagens03.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PrecosPlanoComponent,
     Vantagens01Component,
     Vantagens02Component,
-    Vantagens03Component
+    Vantagens03Component,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

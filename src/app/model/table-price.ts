@@ -1,5 +1,5 @@
 export interface TablePrice {
-  origem: string;
-  destino: string;
-  valMin: string
+  origem: string,
+  destino: string,
+  valMin: number
 }

@@ -14,38 +14,42 @@ header {
   align-items: center;
 
   padding: 20px 50px;
-}
 
-header nav {
-  display: flex;
+  a img {
+    width: 60px;
+    height: 63px;
+  }
 
-  .btn {
-    border-style: solid;
-    border-color: #AB49CE;
-    border-radius: 8px;
-    border-width: 2px;
-    padding: 10px 30px;
-    font-weight: 900;
-    color: #fff;
-    background-color: #AB49CE;
+  nav {
+    display: flex;
+
+    li {
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    li:first-child { margin-left: 0;}
+
+    li a {
+      color: #000000;
+      font-size: 16px;
+    }
+
+    .btn {
+      border-style: solid;
+      border-color: #AB49CE;
+      border-radius: 8px;
+      border-width: 2px;
+      padding: 10px 30px;
+      font-weight: 900;
+      color: #fff !important;
+      background-color: #AB49CE;
+    }
   }
 }
 
-header li a {
-  color: #000000;
-  font-size: 16px;
-}
-
-header li {
-  margin: 0 15px;
-  display: flex;
-  align-items: center;
-}
-
-header li:first-child { margin-left: 0;}
-
-
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   header {
     flex-direction: column;
   }
@@ -58,41 +62,58 @@ header li:first-child { margin-left: 0;}
 /*HERO*/
 
 .hero {
-  background-image: url('../../assets/imgs/afro-woman-talking-on-the-phone.jpg');
+  background-image: url('../../../assets/imgs/afro-woman-talking-on-the-phone.jpg');
   background-size: cover;
   min-height: 585px;
+  background-repeat: no-repeat;
+  background-position: center;
 
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   padding: 0 10px 0 200px;
-}
 
-@media (max-width: 700px) {
-  .hero {
-    padding: 90px 10px 0 50px;
+  h1 {
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  p{
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    border-style: solid;
+    border-color: #AB49CE;
+    border-radius: 8px;
+    border-width: 2px;
+    padding: 10px 30px;
+    font-weight: 900;
   }
 }
 
-.hero h1 {
-  font-size: 70px;
-  font-weight: 400;
-  margin-bottom: 15px;
+@media (max-width: 1000px) {
+  .hero {
+    padding: 120px 10px 0 50px;
+
+    h1 {
+      background-color: #AB49CE;
+      border-radius: 10px;
+      border-color: #AB49CE;
+
+    }
+
+    p {
+      background-color: #AB49CE;
+      border-radius: 10px;
+      border-color: #AB49CE;
+    }
+
+  }
 }
 
-.hero p{
-  margin-bottom: 15px;
-}
-
-.hero .btn {
-  border-style: solid;
-  border-color: #AB49CE;
-  border-radius: 8px;
-  border-width: 2px;
-  padding: 10px 30px;
-  font-weight: 900;
-}
 
 /*PLANO TELZIR*/
 .plano-telzir {
@@ -134,17 +155,8 @@ header li:first-child { margin-left: 0;}
 /*PREÇO DOS PLANOS*/
 .precos-planos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   padding: 20px;
 }
-
-@media (max-width: 1000px) {
-  .precos-planos {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
-

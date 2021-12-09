@@ -1,0 +1,117 @@
+<section class="header">
+  <a class="link-voltar" href="#">
+    < Voltar para a página inicial</a>
+      <a class="logo" href="#"><img src="assets/imgs/logo.png" alt="Telzir"></a>
+</section>
+
+<section class="checkout">
+  <div class="form" [formGroup]="form">
+
+    <section class="finalizar">
+      <div class="linha01">
+        <h2>Finalizar contratação</h2>
+        <h3>Dados pessoais</h3>
+      </div>
+
+      <div class="linha02">
+        <div class="coluna coluna01">
+          <label for="nome">Nome</label><br>
+          <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="coluna coluna02">
+          <label for="sobrenome">Sobrenome</label><br>
+          <input type="text" id="sobrenome" name="sobrenome">
+        </div>
+      </div>
+
+      <div class="linha03">
+        <div class="coluna coluna01">
+          <label for="telefone">Telefone</label><br>
+          <input type="text" id="telefone" name="telefone" class="form-control" formControlName="telefone"
+            mask="(00) 0 0000-0000">
+        </div>
+
+        <div class="coluna coluna02">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email">
+        </div>
+      </div>
+    </section>
+
+    <section class="end-cobranca">
+      <div class="linha01">
+        <h3>Endereço de cobrança</h3>
+      </div>
+
+      <div class="linha02">
+        <div class="coluna coluna01">
+          <label for="cep">CEP</label><br>
+          <input type="text" id="cep" name="cep" mask="00.000-000">
+          <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu cep</a>
+        </div>
+
+        <div class="coluna coluna02">
+          <label for="endereco">Endereço</label><br>
+          <input type="text" id="endereco" name="endereco">
+        </div>
+      </div>
+
+      <div class="linha03">
+        <div class="coluna coluna01">
+          <label for="numero">Número</label><br>
+          <input type="text" id="numero" name="numero">
+        </div>
+
+        <div class="coluna coluna02">
+          <label for="complemento">Complemento</label><br>
+          <input type="text" id="complemento" name="complemento">
+        </div>
+
+        <div class="coluna coluna03">
+          <label for="estado">Estado</label><br>
+          <select name="estado" id="estado">
+            <option value="0">MG</option>
+            <option value="1">SP</option>
+          </select>
+        </div>
+
+        <div class="coluna coluna04">
+          <label for="cidade">Cidade</label><br>
+          <select name="cidade" id="cidade">
+            <option value="0">Sete Lagoas</option>
+            <option value="1">Belo Horizonte</option>
+            <option value="São Paulo">Belo Horizonte</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="detalhes">
+      <div class="linha01">
+        <h2>Detalhes da contratação</h2>
+      </div>
+
+      <div class="linha02">
+        <div class="coluna coluna01">
+          <p *ngIf="valorPlano">
+            <fa-icon [icon]="faCheck"></fa-icon>
+            Plano FaleMais{{valorPlano}} no valor de R${{valorPlano}},00
+          </p>
+          <br>
+          <p *ngIf="totalSemPlano">
+            <fa-icon [icon]="faCheck"></fa-icon>
+            Minutos com FaleMais no valor de R${{totalSemPlano}},00
+          </p>
+        </div>
+
+        <div class="coluna coluna02">
+          <h3>R${{totalPlano}},00</h3>
+          <p>/mês</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>

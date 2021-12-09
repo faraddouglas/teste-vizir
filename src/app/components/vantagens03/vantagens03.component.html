@@ -21,7 +21,7 @@
         <tr class="body" *ngFor="let tabelaPreco of tabelaPrecos">
           <td>{{tabelaPreco.origem}}</td>
           <td>{{tabelaPreco.destino}}</td>
-          <td>{{tabelaPreco.valMin}}</td>
+          <td>{{tabelaPreco.valMin.toFixed(2)}}</td>
         </tr>
       </table>
     </div>
