@@ -14,6 +14,9 @@ import { Vantagens03Component } from './components/vantagens03/vantagens03.compo
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ObrigadoComponent } from './components/obrigado/obrigado.component';
+import { HeaderCheckoutComponent } from './components/header-checkout/header-checkout.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { NgxMaskModule } from 'ngx-mask';
     Vantagens02Component,
     Vantagens03Component,
     CheckoutComponent,
+    ObrigadoComponent,
+    HeaderCheckoutComponent
   ],
   imports: [
     BrowserModule,

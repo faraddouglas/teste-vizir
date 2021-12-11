@@ -3,21 +3,26 @@
   display: flex;
 
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  text-align: center;
+  align-content: center;
 
-  padding: 20px 10px 20px 10px;
   background-color: #FFE8D3;
 
-
     .cl-content-1{
-      margin: 20px 10px 20px 40px;
+      //margin: 20px 10px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
       width: 25%;
     }
 
     .cl-content-2{
-      margin: 20px 40px 20px 10px;
+      display: flex;
+      justify-content: center;
+
+      margin: 20px;
       width: 40%;
       background-color: #fff;
 
@@ -140,8 +145,6 @@
 
 @media (max-width: 700px) {
   .calculo-telzir{
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     .cl-content-1{
       margin: 20px 0px 20px 0px;
@@ -149,7 +152,7 @@
     }
 
     .cl-content-2{
-      margin: 20px 0px 20px 0px;
+      margin: 20px;
       width: 100%;
     }
 

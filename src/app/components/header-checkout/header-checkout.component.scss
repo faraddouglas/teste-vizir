@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 15px 30px 10px 30px;
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #CBB7A5;
+
+  a img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .logo {
+    padding-left: 30%;
+  }
+}

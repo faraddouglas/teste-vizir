@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Origem, Destino, Tempo, Plano, Total } from 'src/app/model/dadosCalculo';
 import { dados } from 'src/banco de dados/dados';
 
+import Swal from 'sweetalert2'
+
 @Component({
   selector: 'app-calculo-home',
   templateUrl: './calculo-home.component.html',
@@ -76,7 +78,12 @@ export class CalculoHomeComponent implements OnInit {
       this.router.navigate(['/checkout', { valorPlano: this.total.valorPlano,
         totalSemPlano: this.total.totalSemPlano, totalComPlano: this.total.totalComPlano }])
     } else {
-      alert('Preencha pelo menos  o plano desejado ou a quantidade de minutos!')
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Preencha pelo menos  o PLANO desejado ou a ORIGEM, DESTINO e o TEMPO!',
+        confirmButtonColor: '#AB49CE',
+      })
     }
 
 

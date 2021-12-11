@@ -1,39 +1,110 @@
-/*HEADER*/
-header {
-  //background-image: url('/src/assets/imgs/afro-woman-talking-on-the-phone.jpg');
-  //background-repeat: no-repeat;
-  //background-position: center;
+/*header*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
 
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .header {
 
-  padding: 20px 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  a img {
-    width: 60px;
-    height: 63px;
-  }
-
-  nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    li {
-      margin: 0 15px;
-      display: flex;
-      align-items: center;
+    padding: 20px 50px;
+
+    a img {
+      width: 60px;
+      height: 63px;
     }
 
-    li:first-child { margin-left: 0;}
+    nav {
+      display: flex;
 
-    li a {
-      color: #000000;
-      font-size: 16px;
+      li {
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      li:first-child { margin-left: 0;}
+
+      li a {
+        color: #000000;
+        font-size: 16px;
+      }
+
+      .btn {
+        border-style: solid;
+        border-color: #AB49CE;
+        border-radius: 8px;
+        border-width: 2px;
+        padding: 10px 30px;
+        font-weight: 900;
+        color: #fff !important;
+        background-color: #AB49CE;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    header {
+      flex-direction: column;
+    }
+    header img {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  /*background*/
+  .background {
+    background-image: url('../../../assets/imgs/afro-woman-talking-on-the-phone.jpg');
+    background-size: cover;
+    min-height: 585px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    //padding: 0 10px 0 200px;
+
+    .text-background {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+
+      width: 60%;
+
+      padding: 20px;
+
+      h1 {
+        font-size: 70px;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+
+      p{
+        margin-bottom: 15px;
+      }
+
+      a {
+        color: #AB49CE;
+        width: 150px;
+        height: 40px;
+
+        text-align: center;
+      }
     }
 
     .btn {
@@ -43,120 +114,99 @@ header {
       border-width: 2px;
       padding: 10px 30px;
       font-weight: 900;
-      color: #fff !important;
-      background-color: #AB49CE;
     }
   }
-}
 
-@media (max-width: 1000px) {
-  header {
+  @media (max-width: 1000px) {
+    .background {
+
+      .text-background {
+        padding-top: 120px;
+        width: 100%;
+
+        h1 {
+          background-color: #AB49CE;
+          border-radius: 10px;
+          border-color: #AB49CE;
+
+        }
+
+        p {
+          background-color: #AB49CE;
+          border-radius: 10px;
+          border-color: #AB49CE;
+        }
+      }
+
+    }
+  }
+
+  /*cáclulo telzir*/
+  .calculo {
+    display: flex;
     flex-direction: column;
-  }
-  header img {
-    margin-bottom: 15px;
-  }
-
-}
-
-/*HERO*/
-
-.hero {
-  background-image: url('../../../assets/imgs/afro-woman-talking-on-the-phone.jpg');
-  background-size: cover;
-  min-height: 585px;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 0 10px 0 200px;
-
-  h1 {
-    font-size: 70px;
-    font-weight: 400;
-    margin-bottom: 15px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
   }
 
-  p{
-    margin-bottom: 15px;
-  }
-
-  .btn {
-    border-style: solid;
-    border-color: #AB49CE;
-    border-radius: 8px;
-    border-width: 2px;
-    padding: 10px 30px;
-    font-weight: 900;
-  }
-}
-
-@media (max-width: 1000px) {
-  .hero {
-    padding: 120px 10px 0 50px;
-
-    h1 {
-      background-color: #AB49CE;
-      border-radius: 10px;
-      border-color: #AB49CE;
-
-    }
-
-    p {
-      background-color: #AB49CE;
-      border-radius: 10px;
-      border-color: #AB49CE;
-    }
-
-  }
-}
-
-
-/*PLANO TELZIR*/
-.plano-telzir {
-  display: flex;
-
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-
-  padding: 10px 0 10px 0;
-
-  .pl-content {
-    width: 30%;
-
-    h1 {
-      font-size: 32px;
-      padding-top: 15px;
-    }
-
-    p {
-      color: #666666;
-      font-size: 18px;
-      margin: 15px;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
+  /*PLANO TELZIR*/
   .plano-telzir {
-    flex-direction: column;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    padding: 10px 0 10px 0;
 
     .pl-content {
-      width: 100%;
+      width: 30%;
+
+      h1 {
+        font-size: 32px;
+        padding-top: 15px;
+      }
+
+      p {
+        color: #666666;
+        font-size: 18px;
+        margin: 15px;
+      }
     }
+  }
+
+  @media (max-width: 1000px) {
+    .plano-telzir {
+      flex-direction: column;
+
+      .pl-content {
+        width: 100%;
+      }
+    }
+
+  }
+
+  /*PREÇO DOS PLANOS*/
+  .precos-planos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  /*footer*/
+  .footer-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
   }
 
 }
 
-/*PREÇO DOS PLANOS*/
-.precos-planos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  padding: 20px;
-}
