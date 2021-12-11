@@ -1,145 +1,146 @@
-<app-header-checkout></app-header-checkout>
+  <app-header-checkout></app-header-checkout>
 
-<section class="checkout">
-  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <section class="checkout">
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
 
-    <section class="finalizar">
-      <div class="linha01">
-        <h2>Finalizar contratação</h2>
-        <h3>Dados pessoais</h3>
-      </div>
-
-      <div class="linha02">
-        <div class="coluna coluna01">
-          <label for="nome">Nome</label><br>
-          <input type="text" id="nome" name="nome" formControlName="nome">
+      <section class="finalizar">
+        <div class="linha01">
+          <h2>Finalizar contratação</h2>
+          <h3>Dados pessoais</h3>
         </div>
 
-        <div class="coluna coluna02">
-          <label for="sobrenome">Sobrenome</label><br>
-          <input type="text" id="sobrenome" name="sobrenome" formControlName="sobrenome">
-        </div>
-      </div>
+        <div class="linha02">
+          <div class="coluna coluna01">
+            <label for="nome">Nome</label><br>
+            <input type="text" id="nome" name="nome" formControlName="nome">
+          </div>
 
-      <div class="linha03">
-        <div class="coluna coluna01">
-          <label for="telefone">Telefone</label><br>
-          <input type="text" id="telefone" name="telefone" class="form-control" formControlName="telefone"
-            mask="(00) 0 0000-0000">
-        </div>
-
-        <div class="coluna coluna02">
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" formControlName="email">
-        </div>
-      </div>
-    </section>
-
-    <section class="end-cobranca">
-      <div class="linha01">
-        <h3>Endereço de cobrança</h3>
-      </div>
-
-      <div class="linha02">
-        <div class="coluna coluna01">
-          <label for="cep">CEP</label><br>
-          <input type="text" id="cep" name="cep" mask="00.000-000" formControlName="cep">
-          <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu cep</a>
+          <div class="coluna coluna02">
+            <label for="sobrenome">Sobrenome</label><br>
+            <input type="text" id="sobrenome" name="sobrenome" formControlName="sobrenome">
+          </div>
         </div>
 
-        <div class="coluna coluna02">
-          <label for="endereco">Endereço</label><br>
-          <input type="text" id="endereco" name="endereco" formControlName="endereco">
-        </div>
-      </div>
+        <div class="linha03">
+          <div class="coluna coluna01">
+            <label for="telefone">Telefone</label><br>
+            <input type="text" id="telefone" name="telefone" class="form-control" formControlName="telefone"
+              mask="(00) 0 0000-0000">
+          </div>
 
-      <div class="linha03">
-        <div class="coluna coluna01">
-          <label for="numero">Número</label><br>
-          <input type="text" id="numero" name="numero" formControlName="numero">
+          <div class="coluna coluna02">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" formControlName="email">
+          </div>
         </div>
+      </section>
 
-        <div class="coluna coluna02">
-          <label for="complemento">Complemento</label><br>
-          <input type="text" id="complemento" name="complemento" formControlName="complemento">
-        </div>
-
-        <div class="coluna coluna03">
-          <label for="estado">Estado</label><br>
-          <select name="estado" id="estado" formControlName="estado">
-            <option value="0">MG</option>
-            <option value="1">SP</option>
-          </select>
+      <section class="end-cobranca">
+        <div class="linha01">
+          <h3>Endereço de cobrança</h3>
         </div>
 
-        <div class="coluna coluna04">
-          <label for="cidade">Cidade</label><br>
-          <select name="cidade" id="cidade" formControlName="cidade">
-            <option value="0">Sete Lagoas</option>
-            <option value="1">Belo Horizonte</option>
-            <option value="São Paulo">Belo Horizonte</option>
-          </select>
-        </div>
-      </div>
-    </section>
+        <div class="linha02">
+          <div class="coluna coluna01">
+            <label for="cep">CEP</label><br>
+            <input type="text" id="cep" name="cep" mask="00.000-000" formControlName="cep">
+            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu cep</a>
+          </div>
 
-
-    <section class="detalhes">
-      <div class="linha01">
-        <h2>Detalhes da contratação</h2>
-      </div>
-
-      <div class="linha02">
-        <div class="coluna coluna01">
-          <p *ngIf="valorPlano">
-            <fa-icon [icon]="faCheck"></fa-icon>
-            Plano FaleMais{{valorPlano}} no valor de R${{valorPlano}},00
-          </p>
-          <br>
-          <p *ngIf="totalSemPlano">
-            <fa-icon [icon]="faCheck"></fa-icon>
-            Minutos com FaleMais no valor de R${{totalSemPlano}},00
-          </p>
+          <div class="coluna coluna02">
+            <label for="endereco">Endereço</label><br>
+            <input type="text" id="endereco" name="endereco" formControlName="endereco">
+          </div>
         </div>
 
-        <div class="coluna coluna02">
-          <h3>R${{totalPlano}},00</h3>
-          <p>/mês</p>
+        <div class="linha03">
+          <div class="coluna coluna01">
+            <label for="numero">Número</label><br>
+            <input type="text" id="numero" name="numero" formControlName="numero">
+          </div>
+
+          <div class="coluna coluna02">
+            <label for="complemento">Complemento</label><br>
+            <input type="text" id="complemento" name="complemento" formControlName="complemento">
+          </div>
+
+          <div class="coluna coluna03">
+            <label for="estado">Estado</label><br>
+            <select name="estado" id="estado" formControlName="estado">
+              <option value="0">MG</option>
+              <option value="1">SP</option>
+            </select>
+          </div>
+
+          <div class="coluna coluna04">
+            <label for="cidade">Cidade</label><br>
+            <select name="cidade" id="cidade" formControlName="cidade">
+              <option value="0">Sete Lagoas</option>
+              <option value="1">Belo Horizonte</option>
+              <option value="São Paulo">Belo Horizonte</option>
+            </select>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="pagamento">
-      <div class="linha01">
-        <h2>Pagamento</h2>
-      </div>
 
-      <div class="linha02">
-        <div class="coluna coluna01">
-          <label for="nome">Nome no cartão</label><br>
-          <input type="text" id="nome" name="nome" formControlName="nomeCartao">
-        </div>
-      </div>
-
-      <div class="linha03">
-        <div class="coluna01">
-          <label for="telefone">Número do cartão</label><br>
-          <input type="text" id="telefone" name="telefone" class="form-control" formControlName="numeroCartao"
-            mask="0000 0000 0000 0000" placeholder="0000 0000 0000 0000">
+      <section class="detalhes">
+        <div class="linha01">
+          <h2>Detalhes da contratação</h2>
         </div>
 
-        <div class="coluna02">
-          <input type="text" id="validade" name="validade" mask="00/00" placeholder="Mês/Ano"
-            formControlName="validade">
-          <input type="text" id="cvv" name="cvv" formControlName="cvv" minlength="3" maxlength="4">
+        <div class="linha02">
+          <div class="coluna coluna01">
+            <p *ngIf="valorPlano">
+              <fa-icon [icon]="faCheck"></fa-icon>
+              Plano FaleMais{{valorPlano}} no valor de R${{valorPlano}},00
+            </p>
+            <br>
+            <p *ngIf="totalSemPlano">
+              <fa-icon [icon]="faCheck"></fa-icon>
+              Minutos com FaleMais no valor de R${{totalSemPlano}},00
+            </p>
+          </div>
+
+          <div class="coluna coluna02">
+            <h3>R${{totalPlano}},00</h3>
+            <p>/mês</p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="pagamento">
+        <div class="linha01">
+          <h2>Pagamento</h2>
+        </div>
+
+        <div class="linha02">
+          <div class="coluna coluna01">
+            <label for="nome">Nome no cartão</label><br>
+            <input type="text" id="nome" name="nome" formControlName="nomeCartao">
+          </div>
+        </div>
+
+        <div class="linha03">
+          <div class="coluna01">
+            <label for="telefone">Número do cartão</label><br>
+            <input type="text" id="telefone" name="telefone" class="form-control" formControlName="numeroCartao"
+              mask="0000 0000 0000 0000" placeholder="0000 0000 0000 0000">
+          </div>
+
+          <div class="coluna02">
+            <input type="text" id="validade" name="validade" mask="00/00" placeholder="Mês/Ano"
+              formControlName="validade">
+            <input type="text" id="cvv" name="cvv" formControlName="cvv" minlength="3" maxlength="4">
+          </div>
+        </div>
 
 
-      <div class="linha04">
-        <button type="submit" class="btn">Finalizar e contratar</button>
-      </div>
-    </section>
+        <div class="linha04">
+          <button type="submit" class="btn">Finalizar e contratar</button>
+        </div>
+      </section>
 
-  </form>
-</section>
+    </form>
+  </section>
+

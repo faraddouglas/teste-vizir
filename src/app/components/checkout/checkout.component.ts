@@ -22,6 +22,8 @@ export class CheckoutComponent implements OnInit {
   totalPlano: number;
 
   constructor(private router: Router, private route: ActivatedRoute) {
+    parent.scroll(0,0);
+
     const plano: any = this.route.snapshot.paramMap.get('valorPlano')
     const semPlano: any = this.route.snapshot.paramMap.get('totalSemPlano')
     const comPlano: any = this.route.snapshot.paramMap.get('totalComPlano')
