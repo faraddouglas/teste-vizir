@@ -8,14 +8,25 @@
 
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: #CBB7A5;
-
-  a img {
-    width: 68px;
-    height: 68px;
-  }
+  border-bottom-color: #cbb7a5;
 
   .logo {
-    padding-left: 30%;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+    img {
+      width: 68px;
+      height: 68px;
+    }
+
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

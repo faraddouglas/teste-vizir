@@ -5,9 +5,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ObrigadoComponent } from './components/obrigado/obrigado.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'checkout', component: CheckoutComponent},
-  {path: 'obrigado', component: ObrigadoComponent},
+  { path: '', component: HomeComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'obrigado', component: ObrigadoComponent },
 ];
 
 @NgModule({

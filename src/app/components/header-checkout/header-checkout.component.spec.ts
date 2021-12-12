@@ -8,9 +8,9 @@ describe('HeaderCheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderCheckoutComponent ]
+      declarations: [HeaderCheckoutComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

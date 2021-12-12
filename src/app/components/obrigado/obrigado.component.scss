@@ -1,5 +1,6 @@
 .msg-obrigado {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,7 +24,7 @@
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     .linha01 {
       flex-direction: column;
     }
@@ -35,5 +36,4 @@
 
     text-align: center;
   }
-
 }

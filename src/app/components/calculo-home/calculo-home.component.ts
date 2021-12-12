@@ -3,8 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Origem, Destino, Tempo, Plano, Total } from 'src/app/model/dadosCalculo';
 import { dados } from 'src/banco de dados/dados';
-
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-calculo-home',
@@ -69,14 +68,15 @@ export class CalculoHomeComponent implements OnInit {
   }
 
   onSunmit() {
-    console.log(this.form.value)
     if (this.form.get('plano')?.valid ||
       (this.form.get('origem')?.valid &&
         this.form.get('destino')?.valid &&
         this.form.get('tempo')?.valid)) {
 
-      this.router.navigate(['/checkout', { valorPlano: this.total.valorPlano,
-        totalSemPlano: this.total.totalSemPlano, totalComPlano: this.total.totalComPlano }])
+      this.router.navigate(['/checkout', {
+        valorPlano: this.total.valorPlano,
+        totalSemPlano: this.total.totalSemPlano, totalComPlano: this.total.totalComPlano
+      }])
     } else {
       Swal.fire({
         icon: 'error',
@@ -85,8 +85,6 @@ export class CalculoHomeComponent implements OnInit {
         confirmButtonColor: '#AB49CE',
       })
     }
-
-
   }
 
   onChanges() {
@@ -98,8 +96,6 @@ export class CalculoHomeComponent implements OnInit {
       const tempo = form.tempo
 
       const plano = form.plano
-
-      console.log(form)
 
       switch (tempo || plano) {
         case 20:
@@ -129,15 +125,8 @@ export class CalculoHomeComponent implements OnInit {
         case 200:
           this.total = this.calcularTarifa(origem, destino, tempo, plano)
           break;
-
-        default:
-          break;
       }
-
-      console.log(this.total)
-
     });
-
   }
 
   calcularTarifa(origem: string, destino: string, tempo: number, plano: number) {

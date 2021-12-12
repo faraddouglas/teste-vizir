@@ -16,7 +16,7 @@
 
     border-style: solid;
     border-radius: 8px;
-    border-color: #E5E5E5;
+    border-color: #e5e5e5;
 
     margin: 0;
 
@@ -26,20 +26,20 @@
       margin: 3px;
     }
 
-    h5{
+    h5 {
       margin: 12px;
       font-size: 14px;
     }
 
-    h1{
+    h1 {
       font-size: 40px;
     }
 
-    p{
+    p {
       margin: 15px;
     }
 
-    .beneficios{
+    .beneficios {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -47,7 +47,7 @@
       color: #666666;
       font-size: 14px;
 
-      fa-icon{
+      fa-icon {
         color: lawngreen;
       }
     }
@@ -58,17 +58,15 @@
       align-items: center;
 
       border-style: solid;
-      border-color: #AB49CE;
+      border-color: #ab49ce;
       border-radius: 8px;
       border-width: 2px;
       margin: 20px 42px 10px 42px;
       font-weight: 900;
-      color: #AB49CE;
+      color: #ab49ce;
 
       width: 120px;
       height: 40px;
     }
   }
 }
-
-

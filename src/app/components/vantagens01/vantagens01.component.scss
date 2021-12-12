@@ -6,11 +6,10 @@
 
   margin: 40px 0 40px 0;
 
-    .vt-content {
-      width: 30%;
-      padding-left: 10%;
-    }
-
+  .vt-content {
+    width: 30%;
+    padding-left: 10%;
+  }
 
   .vantagens-telzir-esq {
     display: flex;
@@ -19,7 +18,7 @@
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-color: #D0D0D0;
+    border-color: #d0d0d0;
 
     width: 60%;
 
@@ -46,19 +45,15 @@
       display: flex;
       justify-content: center;
     }
-
   }
 }
 
-.vt-content-1{
-
+.vt-content-1 {
   h1 {
     font-size: 40px;
     padding-top: 15px;
   }
 }
-
-
 
 @media (max-width: 1000px) {
   .vantagens-telzir-01 {
@@ -67,7 +62,7 @@
 
     margin: 0px;
 
-    .vt-content{
+    .vt-content {
       width: 100%;
       padding-left: 0;
     }
@@ -80,7 +75,7 @@
       margin: 0px;
       width: 100%;
 
-      .vt-content{
+      .vt-content {
         padding: 20px;
         width: 100%;
 
@@ -93,6 +88,6 @@
 
   .vantagens-hr {
     margin-left: 0;
-    border: 1px solid #D0D0D0;
+    border: 1px solid #d0d0d0;
   }
 }

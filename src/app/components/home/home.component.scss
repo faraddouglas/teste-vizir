@@ -6,7 +6,6 @@
   width: 100%;
 
   .header {
-
     width: 100%;
     position: absolute;
     top: 0;
@@ -32,7 +31,9 @@
         align-items: center;
       }
 
-      li:first-child { margin-left: 0;}
+      li:first-child {
+        margin-left: 0;
+      }
 
       li a {
         color: #000000;
@@ -41,13 +42,13 @@
 
       .btn {
         border-style: solid;
-        border-color: #AB49CE;
+        border-color: #ab49ce;
         border-radius: 8px;
         border-width: 2px;
         padding: 10px 30px;
         font-weight: 900;
         color: #fff !important;
-        background-color: #AB49CE;
+        background-color: #ab49ce;
       }
     }
   }
@@ -59,12 +60,11 @@
     header img {
       margin-bottom: 15px;
     }
-
   }
 
   /*background*/
   .background {
-    background-image: url('../../../assets/imgs/afro-woman-talking-on-the-phone.jpg');
+    background-image: url("../../../assets/imgs/afro-woman-talking-on-the-phone.jpg");
     background-size: cover;
     min-height: 585px;
     background-repeat: no-repeat;
@@ -76,7 +76,6 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    //padding: 0 10px 0 200px;
 
     .text-background {
       display: flex;
@@ -94,12 +93,12 @@
         margin-bottom: 15px;
       }
 
-      p{
+      p {
         margin-bottom: 15px;
       }
 
       a {
-        color: #AB49CE;
+        color: #ab49ce;
         width: 150px;
         height: 40px;
 
@@ -109,7 +108,7 @@
 
     .btn {
       border-style: solid;
-      border-color: #AB49CE;
+      border-color: #ab49ce;
       border-radius: 8px;
       border-width: 2px;
       padding: 10px 30px;
@@ -119,26 +118,32 @@
 
   @media (max-width: 1000px) {
     .background {
-
       .text-background {
         padding-top: 120px;
         width: 100%;
 
         h1 {
-          background-color: #AB49CE;
+          background-color: #ab49ce;
           border-radius: 10px;
-          border-color: #AB49CE;
-
+          border-color: #ab49ce;
         }
 
         p {
-          background-color: #AB49CE;
+          background-color: #ab49ce;
           border-radius: 10px;
-          border-color: #AB49CE;
+          border-color: #ab49ce;
         }
       }
-
     }
+  }
+
+  /*vantagens*/
+  .vantagens {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
   }
 
   /*cáclulo telzir*/
@@ -185,7 +190,6 @@
         width: 100%;
       }
     }
-
   }
 
   /*PREÇO DOS PLANOS*/
@@ -200,13 +204,11 @@
   }
 
   /*footer*/
-  .footer-home{
+  .footer-home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     width: 100%;
   }
-
 }
-

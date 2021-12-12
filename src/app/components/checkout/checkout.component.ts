@@ -5,7 +5,6 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
 
 
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -22,7 +21,7 @@ export class CheckoutComponent implements OnInit {
   totalPlano: number;
 
   constructor(private router: Router, private route: ActivatedRoute) {
-    parent.scroll(0,0);
+    parent.scroll(0, 0);
 
     const plano: any = this.route.snapshot.paramMap.get('valorPlano')
     const semPlano: any = this.route.snapshot.paramMap.get('totalSemPlano')
@@ -35,8 +34,8 @@ export class CheckoutComponent implements OnInit {
     this.totalPlano = this.valorPlano + this.totalComPlano
 
     this.form = new FormGroup({
-      nome: new FormControl('', Validators.required),
-      sobrenome: new FormControl('', Validators.required),
+      nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      sobrenome: new FormControl('', [Validators.required, Validators.minLength(3)]),
       telefone: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
 
@@ -47,41 +46,39 @@ export class CheckoutComponent implements OnInit {
       estado: new FormControl('', Validators.required),
       cidade: new FormControl('', Validators.required),
 
-      nomeCartao: new FormControl('', Validators.required),
+      nomeCartao: new FormControl('', [Validators.required, Validators.minLength(3)]),
       numeroCartao: new FormControl('', Validators.required),
       validade: new FormControl('', Validators.required),
-      cvv: new FormControl('', [ Validators.required, Validators.minLength(3), Validators.maxLength(4)]),
+      cvv: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(4)]),
     })
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(e: Event) {
-
-    console.log(this.form)
-
+  onSubmit() {
     if (this.form.invalid) {
-      if(this.form.controls.nome.invalid) this.form.controls.nome.markAsTouched();
-      if(this.form.controls.sobrenome.invalid) this.form.controls.sobrenome.markAsTouched();
-      if(this.form.controls.telefone.invalid) this.form.controls.telefone.markAsTouched();
-      if(this.form.controls.email.invalid) this.form.controls.email.markAsTouched();
-      if(this.form.controls.cep.invalid) this.form.controls.cep.markAsTouched();
-      if(this.form.controls.endereco.invalid) this.form.controls.endereco.markAsTouched();
-      if(this.form.controls.numero.invalid) this.form.controls.numero.markAsTouched();
-      if(this.form.controls.estado.invalid) this.form.controls.estado.markAsTouched();
-      if(this.form.controls.nomeCartao.invalid) this.form.controls.nomeCartao.markAsTouched();
-      if(this.form.controls.numeroCartao.invalid) this.form.controls.numeroCartao.markAsTouched();
-      if(this.form.controls.validade.invalid) this.form.controls.validade.markAsTouched();
-      if(this.form.controls.cvv.invalid) this.form.controls.cvv.markAsTouched();
+      if (this.form.controls.nome.invalid) this.form.controls.nome.markAsTouched();
+      if (this.form.controls.sobrenome.invalid) this.form.controls.sobrenome.markAsTouched();
+      if (this.form.controls.telefone.invalid) this.form.controls.telefone.markAsTouched();
+      if (this.form.controls.email.invalid) this.form.controls.email.markAsTouched();
+      if (this.form.controls.cep.invalid) this.form.controls.cep.markAsTouched();
+      if (this.form.controls.endereco.invalid) this.form.controls.endereco.markAsTouched();
+      if (this.form.controls.numero.invalid) this.form.controls.numero.markAsTouched();
+      if (this.form.controls.estado.invalid) this.form.controls.estado.markAsTouched();
+      if (this.form.controls.cidade.invalid) this.form.controls.cidade.markAsTouched();
+      if (this.form.controls.nomeCartao.invalid) this.form.controls.nomeCartao.markAsTouched();
+      if (this.form.controls.numeroCartao.invalid) this.form.controls.numeroCartao.markAsTouched();
+      if (this.form.controls.validade.invalid) this.form.controls.validade.markAsTouched();
+      if (this.form.controls.cvv.invalid) this.form.controls.cvv.markAsTouched();
 
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Preencha todos os campos do formulário!',
+        text: 'Preencha corretamente, os campos em vermelho!',
         confirmButtonColor: '#AB49CE',
       })
-    }else {
+    } else {
       this.router.navigate(['/obrigado'])
     }
 
@@ -101,7 +98,4 @@ export class CheckoutComponent implements OnInit {
   get numeroCartao() { return this.form.get('numeroCartao'); }
   get validade() { return this.form.get('validade'); }
   get cvv() { return this.form.get('cvv'); }
-
-
-
 }

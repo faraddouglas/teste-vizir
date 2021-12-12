@@ -9,7 +9,7 @@
   .vantagens-telzir-esq {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     width: 60%;
 
@@ -31,25 +31,23 @@
       width: 40%;
     }
 
-    .vt-content-3{
+    .vt-content-3 {
       display: flex;
-      justify-content: space-between;
-
+      justify-content: center;
+      padding: 0;
 
       margin: 0 20px 20px 20px;
-      padding: 0;
       width: 50%;
       background-color: #fff;
 
       border-style: solid;
       border-width: 1px;
       border-radius: 8px;
-      border-color: #E5E5E5;
-
+      border-color: #e5e5e5;
 
       table {
         border-collapse: collapse;
-        height: 100%;
+        width: 100%;
       }
 
       table .header {
@@ -59,11 +57,11 @@
         font-size: 18px;
         font-weight: 700;
 
-        color: #AB49CE;
+        color: #ab49ce;
 
         border-bottom-style: solid;
         border-width: 1px;
-        border-color: #E5E5E5;
+        border-color: #e5e5e5;
 
         td {
           padding: 10px;
@@ -76,7 +74,7 @@
 
         border-bottom-style: solid;
         border-width: 1px;
-        border-color: #E5E5E5;
+        border-color: #e5e5e5;
 
         td {
           padding: 10px;
@@ -86,7 +84,6 @@
       table .body:last-child {
         border-bottom-style: none;
       }
-
     }
   }
 }
@@ -99,7 +96,7 @@
 
     margin: 0px;
 
-    .vt-content{
+    .vt-content {
       width: 100%;
       padding-left: 0;
     }
@@ -112,7 +109,7 @@
       margin: 0px;
       width: 100%;
 
-      .vt-content{
+      .vt-content {
         padding: 20px;
         width: 100%;
 
@@ -121,7 +118,8 @@
         }
       }
 
-      .vt-content-3{
+      .vt-content-3 {
+        padding: 0;
         width: 80%;
       }
     }
